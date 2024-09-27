@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <section id="todo-section">
+      <div class="container-1">
+        <div class="todo">
+          <h2>
+          TO DO LIST 🦆
+
+            <img class="sticky-note" src="./image/check.png" alt="Todo Icon" />
+          </h2>
+          <div class="row">
+            <input type="text" id="input-box" placeholder="Add your task" />
+            <button onclick="addTask()" id="todobutton">Add Task</button>
+          </div>
+          <div class="filters">
+            <button id="all-tasks">All</button>
+            <button id="pending-tasks">Pending</button>
+            <button id="completed-tasks">Completed</button>
+          </div>
+          <ul id="list-container"></ul>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
