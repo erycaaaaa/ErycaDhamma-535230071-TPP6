@@ -65,3 +65,38 @@ document.getElementById("completed-tasks").addEventListener("click", function ()
     }
   });
 });
+listContainer.addEventListener("dblclick", function (e) {
+  if (e.target.tagName === "LI") {
+    let currentTask = e.target;
+    let currentText = currentTask.textContent.replace("✕", ""); // Menghapus simbol '×' dari teks
+    let input = document.createElement("input");
+    input.type = "text";
+    input.value = currentText;
+    input.classList.add("rename-input");
+    currentTask.innerHTML = "";
+    currentTask.appendChild(input);
+
+    // Fokuskan input dan pilih teks
+    input.focus();
+    input.select();
+
+    input.addEventListener("blur", function () {
+      if (input.value.trim() !== "") {
+        currentTask.innerHTML = input.value;
+        let span = document.createElement("span");
+        span.innerHTML = "\u00d7";
+        currentTask.appendChild(span);
+        saveData(); // Simpan perubahan setelah rename
+      } else {
+        currentTask.remove(); // Jika input kosong, hapus tugas
+        saveData();
+      }
+    });
+
+    input.addEventListener("keypress", function (e) {
+      if (e.key === "Enter") {
+        input.blur(); // Simpan perubahan saat menekan Enter
+      }
+    });
+  }
+});

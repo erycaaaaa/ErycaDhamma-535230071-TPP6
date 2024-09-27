@@ -2,11 +2,11 @@
   width: 90%;
   min-height: 100vh;
   margin: 0 auto;
-  margin-top: 15px;
+  margin-top: 0px 0px 0px 0px;
   position: relative;
   display: block;
   padding-top: 150px;
-  background-image: url('./image/white-paper-texture.jpg'); 
+  background-image: url("./image/image.png");
 }
 
 .todo {
@@ -15,24 +15,26 @@
   margin: 30px auto;
   padding: 40px;
   padding-top: 10px;
-  border-radius: 10px;
+  border-radius: 50px;
+  border-style: dotted;
   transition: all 0.3s ease;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 15px 20px rgba(0,0,0,0.4);
+  background: url("./image/white-paper-texture-background.jpg");
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
+
 }
 
 #todobutton {
-    background-image: url('./image/6010309.jpg'); 
+  background-image: url("./image/image.png");
   color: white;
   border: none;
   padding: 10px 15px;
-  border-radius: 15px;
+  border-radius: 50px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 #todobutton:hover {
-    background-image: url('./image/image.png'); 
+  background-image: url("./image/image.png");
 }
 .todo h2 {
   color: #575757;
@@ -63,7 +65,6 @@ input {
   outline: none;
   background: transparent;
   padding: 10px;
-  
 }
 
 ul li {
@@ -94,14 +95,12 @@ ul li span {
   line-height: 40px;
   text-align: center;
   border-radius: 50%;
-  
 }
 
 @media (max-width: 768px) {
   .todo {
     width: 80%;
     margin-top: 50px;
-    
   }
 
   .todo h2 img {
@@ -157,4 +156,13 @@ form {
   background-color: #d05454;
 }
 #all-tasks:hover {
-    background-image: url('./image/image.png'); }
+  background-image: url("./image/image.png");
+}
+.rename-input {
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
